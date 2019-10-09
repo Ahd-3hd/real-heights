@@ -10,6 +10,7 @@ import Gallery from "./components/Gallery";
 import Quotes from "./components/Quotes";
 import Packages from "./components/Packages";
 import Map from "./components/Map";
+import Footer from "./components/Footer";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -36,6 +37,7 @@ function App() {
           <Map language={lang} />
         </Route>
       </Switch>
+      <Footer language={lang} />
     </Router>
   );
 }
