@@ -8,6 +8,8 @@ import { FeautresWrapper } from "./App.style";
 import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import Quotes from "./components/Quotes";
+import Packages from "./components/Packages";
+import Map from "./components/Map";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -30,6 +32,8 @@ function App() {
           <FeautresWrapper style={{ top: 0, background: "#555555" }}>
             <Quotes language={lang} />
           </FeautresWrapper>
+          <Packages language={lang} />
+          <Map language={lang} />
         </Route>
       </Switch>
     </Router>
