@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Features from "./components/Features";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { FeautresWrapper } from "./App.style";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -17,6 +19,9 @@ function App() {
       <Switch>
         <Route path="/">
           <Header language={lang} />
+          <FeautresWrapper>
+            <Features language={lang} />
+          </FeautresWrapper>
         </Route>
       </Switch>
     </Router>
