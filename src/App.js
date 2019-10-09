@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Features from "./components/Features";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FeautresWrapper } from "./App.style";
+import Team from "./components/Team";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -21,6 +22,7 @@ function App() {
           <Header language={lang} />
           <FeautresWrapper>
             <Features language={lang} />
+            <Team language={lang} />
           </FeautresWrapper>
         </Route>
       </Switch>
