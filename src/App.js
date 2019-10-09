@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FeautresWrapper } from "./App.style";
 import Team from "./components/Team";
+import Gallery from "./components/Gallery";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -24,6 +25,7 @@ function App() {
             <Features language={lang} />
             <Team language={lang} />
           </FeautresWrapper>
+          <Gallery language={lang} />
         </Route>
       </Switch>
     </Router>
