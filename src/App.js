@@ -11,6 +11,8 @@ import Quotes from "./components/Quotes";
 import Packages from "./components/Packages";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
+import GalleryPage from "./components/GalleryPage";
+import AboutUsPage from "./components/AboutUsPage";
 
 function App() {
   const [lang, setLang] = useState(true);
@@ -23,7 +25,7 @@ function App() {
       <Navbar language={lang} switchLang={switchLang} />
 
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Header language={lang} />
           <FeautresWrapper>
             <Features language={lang} />
@@ -35,6 +37,12 @@ function App() {
           </FeautresWrapper>
           <Packages language={lang} />
           <Map language={lang} />
+        </Route>
+        <Route exact path="/gallery">
+          <GalleryPage language={lang} />
+        </Route>
+        <Route exact path="/about-us">
+          <AboutUsPage language={lang} />
         </Route>
       </Switch>
       <Footer language={lang} />

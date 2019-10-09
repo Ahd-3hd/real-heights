@@ -106,9 +106,10 @@ const Navbar = props => {
               onClick={props.switchLang}
               to="/about-us"
               className="nav-buttons"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", padding: 0 }}
             >
-              <LanguageIcon style={{ padding: "0 1rem" }} />
+              <LanguageIcon style={{ padding: "0 1rem" }} />{" "}
+              {props.language ? "EN-AR" : "عربي-انجليزي"}
             </Button>
           </li>
         </ul>

@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Filter from "../Filter";
 import { Link } from "react-router-dom";
 const Gallery = props => {
+  // eslint-disable-next-line
   const [exchangeRate, setExchangeRate] = useState(5.83);
   const [price, setPrice] = useState(170000);
   const [currency, setCurrency] = useState("$");

@@ -19,7 +19,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import clsx from "clsx";
 
-import testImage from "../../assets/Yunus.jpg";
+import testImage from "../../assets/header2.jpg";
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 345
