@@ -75,7 +75,7 @@ const GalleryItem = props => {
       />
       <CardMedia
         className={classes.media}
-        image={testImage}
+        image={props.productFields.image}
         title="Paella dish"
       />
       <CardContent>

@@ -20,6 +20,23 @@ const Gallery = props => {
       setCurrency("$");
     }
   };
+  const obtainedProducts = props.products.map(item => {
+    return (
+      <Grid item xs={12} sm={3} key={item.fields.Name}>
+        <GalleryItem
+          language={props.language}
+          price={price}
+          currency={currency}
+          productFields={{
+            description: item.fields.Description,
+            name: item.fields.Name,
+            type: item.fields.Type,
+            image: item.fields.Images[0].url
+          }}
+        />
+      </Grid>
+    );
+  });
   return (
     <Container>
       <Grid container justify="center">
@@ -38,69 +55,7 @@ const Gallery = props => {
         </Grid>
       </Grid>
       <Grid container justify="space-between" spacing={2}>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <GalleryItem
-            language={props.language}
-            price={price}
-            currency={currency}
-          />
-        </Grid>
+        {obtainedProducts}
       </Grid>
       <Grid container justify="center">
         <Button
